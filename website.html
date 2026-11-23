@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mera Web Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f9fc; --ink:#14213d; --muted:#55627a; --accent:#1f6feb; --card:#ffffff; --line:#dbe3ef;
+  --sans:"Hind",system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0d1526;--ink:#eef2fa;--muted:#9fb0cc;--accent:#5ea1ff;--card:#15203a;--line:#26345a;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0d1526;--ink:#eef2fa;--muted:#9fb0cc;--accent:#5ea1ff;--card:#15203a;--line:#26345a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.1rem/1.75 var(--sans)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;max-width:760px;margin:0 auto;padding:1.2rem 1.25rem}
+nav b{font-weight:600;font-size:1.2rem}
+nav a{color:var(--muted);text-decoration:none;margin-left:1.1rem}
+nav a:hover{color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:0 1.25rem 3rem}
+.intro{padding:3rem 0 2.5rem}
+h1{font-size:clamp(2.2rem,8vw,3.6rem);line-height:1.15;margin:0 0 1rem;font-weight:600}
+.intro p{max-width:34ch;color:var(--muted);font-size:1.25rem;margin:0 0 1.5rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;padding:.8rem 1.4rem;border-radius:6px}
+.btn:hover{filter:brightness(.92)}
+section{padding:2rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.6rem;margin:0 0 1rem;font-weight:600}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.2rem}
+.card h3{margin:0 0 .3rem;font-size:1.2rem;font-weight:600}
+.card p{margin:0;color:var(--muted);font-size:1rem;line-height:1.6}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+footer{text-align:center;color:var(--muted);padding:2rem 1.25rem;padding-bottom:calc(2rem + env(safe-area-inset-bottom,0px));font-size:.95rem}
+</style>
+</head>
+<body>
+<nav>
+  <b>Rohan Sharma</b>
+  <div><a href="#about">Mere baare mein</a><a href="#kaam">Kaam</a><a href="#sampark">Sampark</a></div>
+</nav>
+<main>
+  <div class="intro">
+    <h1>Namaste, main Rohan hoon.</h1>
+    <p>Main Mathura se hoon aur logon ke liye saaf-suthre web pages banata hoon.</p>
+    <a class="btn" href="#sampark">Mujhse baat karein</a>
+  </div>
+
+  <section id="about">
+    <h2>Mere baare mein</h2>
+    <p>Mujhe seedhi aur kaam ki cheezein banana pasand hai. Yahan aap apne baare mein 2–3 line likh sakte hain: aap kya karte hain, kitne saal ka anubhav hai, aur kis cheez mein aapko maza aata hai.</p>
+  </section>
+
+  <section id="kaam">
+    <h2>Mera kaam</h2>
+    <div class="grid">
+      <div class="card"><h3>Pehla project</h3><p>Is project ka chhota sa vivaran yahan likhein.</p></div>
+      <div class="card"><h3>Doosra project</h3><p>Is project ka chhota sa vivaran yahan likhein.</p></div>
+      <div class="card"><h3>Teesra project</h3><p>Is project ka chhota sa vivaran yahan likhein.</p></div>
+    </div>
+  </section>
+
+  <section id="sampark">
+    <h2>Sampark karein</h2>
+    <p>Email: <a href="mailto:rohan@example.com" style="color:var(--accent)">rohan@example.com</a><br>Phone: +91 98765 43210</p>
+  </section>
+</main>
+<footer>© 2026 Rohan Sharma</footer>
+</body>
+</html>
